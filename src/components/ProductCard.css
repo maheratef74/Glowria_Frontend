@@ -1,0 +1,136 @@
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(102, 126, 234, 0.9);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-icon {
+  font-size: 4rem;
+  opacity: 0.6;
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.product-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ec4899;
+}
+
+.product-size {
+  font-size: 0.9rem;
+  color: #718096;
+  background: #f7fafc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(236, 72, 153, 0.4);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .product-image {
+    height: 200px;
+  }
+
+  .product-name {
+    font-size: 1.25rem;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+  }
+}

@@ -94,7 +94,6 @@ const Login = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
                 className="form-input"
                 placeholder={translations.login.emailPlaceholder}
               />
@@ -108,7 +107,6 @@ const Login = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                required
                 className="form-input"
                 placeholder={translations.login.passwordPlaceholder}
               />

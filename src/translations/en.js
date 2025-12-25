@@ -1,6 +1,6 @@
 export const translations = {
   header: {
-    title: "Glowria",
+    title: "",
     tagline: "Your journey to radiant skin and beautiful hair"
   },
   nav: {
@@ -20,7 +20,7 @@ export const translations = {
     addToCart: "Add to Cart"
   },
   home: {
-    heroTitle: "Welcome to Amira Beauty",
+    heroTitle: "Welcome",
     heroSubtitle: "Discover premium skincare and haircare products designed to enhance your natural beauty. Your journey to radiant skin and beautiful hair starts here.",
     ctaButton: "Shop Now",
     featuresTitle: "Why Choose Us",
@@ -36,7 +36,7 @@ export const translations = {
     subtitle: "Explore our collection of premium skincare and haircare products"
   },
   about: {
-    title: "About Amira Beauty",
+    title: "About Us",
     subtitle: "Your trusted partner in beauty and wellness",
     missionTitle: "Our Mission",
     missionText: "To empower every woman to feel confident and beautiful in her own skin by providing high-quality, natural beauty products.",
@@ -45,7 +45,7 @@ export const translations = {
     qualityTitle: "Quality Promise",
     qualityText: "We never compromise on quality. Each product undergoes rigorous testing to ensure it meets our high standards.",
     storyTitle: "Our Story",
-    storyText: "Amira Beauty was founded with a simple vision: to make premium beauty products accessible to everyone. We combine traditional wisdom with modern science to create products that truly make a difference in your beauty routine."
+    storyText: "Our company was founded with a simple vision: to make premium beauty products accessible to everyone. We combine traditional wisdom with modern science to create products that truly make a difference in your beauty routine."
   },
   contact: {
     title: "Get in Touch",
@@ -109,7 +109,7 @@ export const translations = {
     successMessage: "Registration successful! Please login."
   },
   footer: {
-    rights: "© 2024 Glowria. All rights reserved."
+    rights: "© 2024. All rights reserved."
   }
 };
 

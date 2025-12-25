@@ -22,12 +22,13 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo-link">
-            <img 
-              src="/images/glowria-logo.png" 
-              alt="Glowria" 
-              className="logo-image"
-            />
-            <h1 className="logo">{translations.header.title}</h1>
+            <div className="logo-image-wrapper">
+              <img 
+                src="/images/glowria-logo.png" 
+                alt="Site logo" 
+                className="logo-image"
+              />
+            </div>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -62,7 +63,7 @@ const Header = () => {
             <div className="nav-auth">
               <Link 
                 to="/login" 
-                className={`nav-link auth-link ${isActive('/login') ? 'active' : ''}`}
+                className={`nav-link auth-link register-link ${isActive('/login') ? 'active' : ''}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {translations.nav.login}

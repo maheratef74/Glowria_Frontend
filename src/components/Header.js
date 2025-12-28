@@ -1,15 +1,27 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
+import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import { translations as enTranslations } from '../translations/en';
 import { translations as arTranslations } from '../translations/ar';
 import './Header.css';
 
 const Header = () => {
   const { language } = useContext(LanguageContext);
+  const { getCartItemsCount } = useCart();
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const translations = language === 'ar' ? arTranslations : enTranslations;
+  const cartItemsCount = getCartItemsCount();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+    setIsMenuOpen(false);
+  };
 
   const isActive = (path) => location.pathname === path;
 
@@ -62,19 +74,53 @@ const Header = () => {
             </Link>
             <div className="nav-auth">
               <Link 
-                to="/login" 
-                className={`nav-link auth-link register-link ${isActive('/login') ? 'active' : ''}`}
+                to="/cart" 
+                className={`nav-link cart-link ${isActive('/cart') ? 'active' : ''}`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {translations.nav.login}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                {cartItemsCount > 0 && (
+                  <span className="cart-badge">{cartItemsCount}</span>
+                )}
               </Link>
-              <Link 
-                to="/register" 
-                className={`nav-link auth-link register-link ${isActive('/register') ? 'active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {translations.nav.register}
-              </Link>
+              {isAuthenticated ? (
+                <>
+                  <Link 
+                    to="/profile" 
+                    className={`nav-link auth-link ${isActive('/profile') ? 'active' : ''}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {translations.nav.profile || 'Profile'}
+                  </Link>
+                  <button 
+                    className="nav-link auth-link logout-btn"
+                    onClick={handleLogout}
+                  >
+                    {translations.nav.logout || 'Logout'}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link 
+                    to="/login" 
+                    className={`nav-link auth-link register-link ${isActive('/login') ? 'active' : ''}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {translations.nav.login}
+                  </Link>
+                  <Link 
+                    to="/register" 
+                    className={`nav-link auth-link register-link ${isActive('/register') ? 'active' : ''}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {translations.nav.register}
+                  </Link>
+                </>
+              )}
             </div>
           </nav>
 

@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './ProductCard.css';
 import { LanguageContext } from '../context/LanguageContext';
+import { useCart } from '../context/CartContext';
 import { translations as enTranslations } from '../translations/en';
 import { translations as arTranslations } from '../translations/ar';
 
 const ProductCard = ({ product }) => {
   const { language } = useContext(LanguageContext);
+  const { addToCart } = useCart();
   const translations = language === 'ar' ? arTranslations : enTranslations;
+  const [isAdding, setIsAdding] = useState(false);
+
+  const handleAddToCart = () => {
+    setIsAdding(true);
+    addToCart(product);
+    setTimeout(() => setIsAdding(false), 500);
+  };
 
   return (
     <div className="product-card">
@@ -30,7 +39,13 @@ const ProductCard = ({ product }) => {
           <span className="product-price">${product.price}</span>
           <span className="product-size">{product.size}</span>
         </div>
-        <button className="add-to-cart-btn">{translations.product.addToCart}</button>
+        <button 
+          className={`add-to-cart-btn ${isAdding ? 'adding' : ''}`}
+          onClick={handleAddToCart}
+          disabled={isAdding}
+        >
+          {isAdding ? (translations.product.added || 'Added!') : translations.product.addToCart}
+        </button>
       </div>
     </div>
   );

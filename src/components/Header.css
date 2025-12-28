@@ -1,8 +1,8 @@
 .header {
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbbf24 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
   color: white;
   padding: 0;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -87,7 +87,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, white, #fbbf24);
+  background: white;
   transition: width 0.3s ease;
 }
 
@@ -132,9 +132,73 @@
 }
 
 .nav-auth .register-link:hover {
-  background: linear-gradient(135deg, white 0%, #fef3c7 100%);
-  color: #ec4899;
-  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+  background: white;
+  color: #8b5cf6;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 38, 38, 0.2);
+  color: #fee2e2;
+}
+
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cart-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cart-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #c084fc;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(192, 132, 252, 0.4);
+  animation: bounceIn 0.3s ease-out;
+}
+
+[dir="rtl"] .cart-badge {
+  right: auto;
+  left: -4px;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .menu-toggle {
@@ -192,7 +256,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
     flex-direction: column;
     padding: 1.5rem 0;
     gap: 0;
@@ -228,13 +292,21 @@
     padding-top: 1rem;
     margin-top: 0.5rem;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .nav-auth .auth-link {
-    width: 100%;
+    flex: 1;
+    min-width: 120px;
     text-align: center;
+  }
+
+  .nav-auth .cart-link {
+    flex: 0 0 auto;
+    min-width: auto;
   }
 
   .logo {

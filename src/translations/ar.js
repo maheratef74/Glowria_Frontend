@@ -9,7 +9,9 @@ export const translations = {
     about: "من نحن",
     contact: "اتصل بنا",
     login: "تسجيل الدخول",
-    register: "إنشاء حساب"
+    register: "إنشاء حساب",
+    profile: "الملف الشخصي",
+    logout: "تسجيل الخروج"
   },
   categories: {
     all: "الكل",
@@ -17,7 +19,21 @@ export const translations = {
     haircare: "العناية بالشعر"
   },
   product: {
-    addToCart: "أضف إلى السلة"
+    addToCart: "أضف إلى السلة",
+    added: "تمت الإضافة!"
+  },
+  cart: {
+    title: "سلة التسوق",
+    emptyTitle: "سلة التسوق فارغة",
+    emptyMessage: "يبدو أنك لم تضيفي أي منتجات إلى السلة بعد.",
+    continueShopping: "متابعة التسوق",
+    clearCart: "مسح السلة",
+    summary: "ملخص الطلب",
+    subtotal: "المجموع الفرعي",
+    shipping: "الشحن",
+    freeShipping: "مجاني",
+    total: "الإجمالي",
+    checkout: "إتمام الطلب"
   },
   home: {
     heroTitle: "مرحباً",
@@ -110,7 +126,27 @@ export const translations = {
     successMessage: "تم إنشاء الحساب بنجاح! يرجى تسجيل الدخول."
   },
   footer: {
-    rights: "© 2024. جميع الحقوق محفوظة."
+    aboutTitle: "عن جلوريا",
+    description: "شريكك الموثوق في الجمال والعافية. نقدم منتجات العناية بالبشرة والشعر المميزة المصممة لتعزيز جمالك الطبيعي.",
+    quickLinks: "روابط سريعة",
+    customerService: "خدمة العملاء",
+    account: "حسابي",
+    contactUs: "اتصل بنا",
+    faq: "الأسئلة الشائعة",
+    shipping: "معلومات الشحن",
+    returns: "الإرجاع والاستبدال",
+    cart: "سلة التسوق",
+    rights: "© 2024 جلوريا للعناية بالجمال. جميع الحقوق محفوظة."
+  },
+  profile: {
+    title: "ملفي الشخصي",
+    welcome: "مرحباً،",
+    orders: "طلباتي",
+    orderNumber: "رقم الطلب",
+    orderDate: "تاريخ الطلب",
+    items: "المنتجات",
+    noOrders: "لم تقم بأي طلبات بعد.",
+    loading: "جاري تحميل الطلبات..."
   }
 };
 

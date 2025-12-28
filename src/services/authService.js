@@ -1,18 +1,19 @@
 import API_BASE_URL from '../config/api';
+import { getCookie, setCookie, removeCookie } from '../utils/cookies';
 
-// Helper function to get auth token from localStorage
+// Helper function to get auth token from cookies
 const getToken = () => {
-  return localStorage.getItem('token');
+  return getCookie('token');
 };
 
-// Helper function to set auth token in localStorage
+// Helper function to set auth token in cookies
 const setToken = (token) => {
-  localStorage.setItem('token', token);
+  setCookie('token', token, 7); // Store for 7 days
 };
 
-// Helper function to remove auth token from localStorage
+// Helper function to remove auth token from cookies
 const removeToken = () => {
-  localStorage.removeItem('token');
+  removeCookie('token');
 };
 
 // Helper function to get auth headers

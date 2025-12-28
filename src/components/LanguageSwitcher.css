@@ -4,22 +4,22 @@
   right: 20px;
   padding: 0.6rem 1.2rem;
   background: white;
-  color: #ec4899;
-  border: 2px solid #ec4899;
+  color: #8b5cf6;
+  border: 2px solid #8b5cf6;
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
 .language-switcher:hover {
-  background: #ec4899;
+  background: #8b5cf6;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
 }
 
 [dir="rtl"] .language-switcher {

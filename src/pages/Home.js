@@ -83,7 +83,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Tech Features Section with Gold Accents */}
+      {/* Tech Features Section */}
       <section className="tech-features">
         <div className="container">
           <div className="tech-header fade-in-up">

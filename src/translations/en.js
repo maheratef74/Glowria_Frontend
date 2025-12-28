@@ -9,7 +9,9 @@ export const translations = {
     about: "About",
     contact: "Contact",
     login: "Login",
-    register: "Register"
+    register: "Register",
+    profile: "Profile",
+    logout: "Logout"
   },
   categories: {
     all: "All",
@@ -17,7 +19,21 @@ export const translations = {
     haircare: "Haircare"
   },
   product: {
-    addToCart: "Add to Cart"
+    addToCart: "Add to Cart",
+    added: "Added!"
+  },
+  cart: {
+    title: "Shopping Cart",
+    emptyTitle: "Your cart is empty",
+    emptyMessage: "Looks like you haven't added any items to your cart yet.",
+    continueShopping: "Continue Shopping",
+    clearCart: "Clear Cart",
+    summary: "Order Summary",
+    subtotal: "Subtotal",
+    shipping: "Shipping",
+    freeShipping: "Free",
+    total: "Total",
+    checkout: "Proceed to Checkout"
   },
   home: {
     heroTitle: "Welcome",
@@ -110,7 +126,27 @@ export const translations = {
     successMessage: "Registration successful! Please login."
   },
   footer: {
-    rights: "© 2024. All rights reserved."
+    aboutTitle: "About Glowria",
+    description: "Your trusted partner in beauty and wellness. We offer premium skincare and haircare products designed to enhance your natural beauty.",
+    quickLinks: "Quick Links",
+    customerService: "Customer Service",
+    account: "My Account",
+    contactUs: "Contact Us",
+    faq: "FAQ",
+    shipping: "Shipping Info",
+    returns: "Returns & Exchanges",
+    cart: "Shopping Cart",
+    rights: "© 2024 Glowria Beauty Care. All rights reserved."
+  },
+  profile: {
+    title: "My Profile",
+    welcome: "Welcome,",
+    orders: "My Orders",
+    orderNumber: "Order Number",
+    orderDate: "Order Date",
+    items: "Items",
+    noOrders: "You haven't placed any orders yet.",
+    loading: "Loading orders..."
   }
 };
 

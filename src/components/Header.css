@@ -1,11 +1,23 @@
 .header {
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbbf24 100%);
   color: white;
   padding: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .header-content {
@@ -75,7 +87,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: white;
+  background: linear-gradient(90deg, white, #fbbf24);
   transition: width 0.3s ease;
 }
 
@@ -120,8 +132,9 @@
 }
 
 .nav-auth .register-link:hover {
-  background: white;
+  background: linear-gradient(135deg, white 0%, #fef3c7 100%);
   color: #ec4899;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
 }
 
 .menu-toggle {

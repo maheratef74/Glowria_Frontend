@@ -23,6 +23,7 @@ export const translations = {
     heroTitle: "Welcome",
     heroSubtitle: "Discover premium skincare and haircare products designed to enhance your natural beauty. Your journey to radiant skin and beautiful hair starts here.",
     ctaButton: "Shop Now",
+    loadMore: "Load More",
     featuresTitle: "Why Choose Us",
     feature1Title: "Premium Quality",
     feature1Desc: "We use only the finest ingredients sourced from nature to create products that truly work.",

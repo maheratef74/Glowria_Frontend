@@ -49,6 +49,54 @@
   font-size: 0.95rem;
 }
 
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper .form-input {
+  padding-right: 3rem;
+}
+
+[dir="rtl"] .password-input-wrapper .form-input {
+  padding-right: 0.875rem;
+  padding-left: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+[dir="rtl"] .password-toggle {
+  right: auto;
+  left: 0.75rem;
+}
+
+.password-toggle:hover {
+  color: #ec4899;
+}
+
+.password-toggle:focus {
+  outline: none;
+  color: #ec4899;
+}
+
+.password-toggle svg {
+  display: block;
+}
+
 .form-input {
   width: 100%;
   padding: 0.875rem;
@@ -140,7 +188,7 @@
 .auth-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbbf24 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -151,6 +199,23 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.auth-button:hover::before {
+  left: 100%;
 }
 
 .auth-button:hover {

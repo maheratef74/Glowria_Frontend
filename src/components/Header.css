@@ -49,11 +49,66 @@
 /* Put the logo on a white background so it appears as drawn on white */
 .logo-image-wrapper {
   background: #fff;
-  padding: 4px 6px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.glowria-logo {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+/* Mobile Quick Actions - Always Visible */
+.mobile-quick-actions {
+  display: none;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.mobile-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mobile-action-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.cart-badge-mobile {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #c084fc;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(192, 132, 252, 0.4);
+}
+
+[dir="rtl"] .cart-badge-mobile {
+  right: auto;
+  left: -4px;
 }
 
 .logo {
@@ -249,6 +304,47 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    order: 3;
+  }
+
+  /* Show mobile quick actions */
+  .mobile-quick-actions {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
+  [dir="rtl"] .mobile-quick-actions {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* Center logo on mobile */
+  .logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: 1;
+    z-index: 1;
+  }
+
+  [dir="rtl"] .logo-link {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .logo-image-wrapper {
+    padding: 4px 8px;
+  }
+
+  .glowria-logo {
+    height: 40px;
+  }
+
+  /* Hide cart/login/profile from nav menu on mobile */
+  .nav-auth {
+    display: none;
   }
 
   .nav {
@@ -282,31 +378,6 @@
 
   .nav-link::after {
     display: none;
-  }
-
-  .nav-auth {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 1rem;
-    margin-top: 0.5rem;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-auth .auth-link {
-    flex: 1;
-    min-width: 120px;
-    text-align: center;
-  }
-
-  .nav-auth .cart-link {
-    flex: 0 0 auto;
-    min-width: auto;
   }
 
   .logo {

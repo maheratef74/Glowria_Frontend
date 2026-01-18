@@ -1,13 +1,21 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
+import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import { translations as enTranslations } from '../translations/en';
 import { translations as arTranslations } from '../translations/ar';
 import './Footer.css';
 
 const Footer = () => {
   const { language } = useContext(LanguageContext);
+  const { getCartItemsCount } = useCart();
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
   const translations = language === 'ar' ? arTranslations : enTranslations;
+  const cartItemsCount = getCartItemsCount();
+
+  const isActive = (path) => location.pathname === path;
 
   const socialLinks = [
     {
@@ -126,6 +134,60 @@ const Footer = () => {
         <div className="footer-bottom">
           <p className="footer-rights">{translations.footer.rights}</p>
         </div>
+      </div>
+      
+      {/* Mobile Navigation Bar - Only visible on mobile */}
+      <div className="mobile-footer-nav">
+        <Link 
+          to="/" 
+          className={`mobile-nav-item ${isActive('/') ? 'active' : ''}`}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>{translations.nav.home}</span>
+        </Link>
+        
+        <Link 
+          to={isAuthenticated ? "/profile" : "/login"} 
+          className={`mobile-nav-item ${isActive('/profile') || isActive('/login') ? 'active' : ''}`}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>{language === 'ar' ? 'حسابی' : translations.nav.profile || 'Account'}</span>
+        </Link>
+        
+        <Link 
+          to="/cart" 
+          className={`mobile-nav-item ${isActive('/cart') ? 'active' : ''}`}
+        >
+          <div className="mobile-nav-cart-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            {cartItemsCount > 0 && (
+              <span className="mobile-nav-cart-badge">{cartItemsCount}</span>
+            )}
+          </div>
+          <span>{translations.footer.cart}</span>
+        </Link>
+        
+        <Link 
+          to="/products" 
+          className={`mobile-nav-item ${isActive('/products') ? 'active' : ''}`}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            <rect x="3" y="9" width="18" height="2"></rect>
+          </svg>
+          <span>{translations.nav.products}</span>
+        </Link>
       </div>
     </footer>
   );

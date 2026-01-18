@@ -49,7 +49,7 @@
 
 .info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15);
 }
 
 .info-icon {
@@ -103,8 +103,8 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
 }
 
 .form-textarea {
@@ -115,7 +115,7 @@
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -129,7 +129,7 @@
 
 .submit-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
 }
 
 .submit-button:active {

@@ -16,7 +16,7 @@
 .cart-title {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,7 +137,7 @@
 .cart-item-price {
   font-size: 1rem;
   font-weight: 600;
-  color: #8b5cf6;
+  color: #ec4899;
 }
 
 .cart-item-controls {
@@ -174,9 +174,9 @@
 }
 
 .quantity-btn:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   color: white;
-  border-color: #8b5cf6;
+  border-color: #ec4899;
 }
 
 .quantity-input {
@@ -199,7 +199,7 @@
 .cart-item-total {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -269,7 +269,7 @@
 .checkout-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -301,14 +301,14 @@
 
 .checkout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
 }
 
 .continue-shopping-link {
   display: block;
   text-align: center;
   margin-top: 1rem;
-  color: #8b5cf6;
+  color: #ec4899;
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.3s ease;
@@ -349,19 +349,19 @@
 .continue-shopping-btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
   color: white;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
 }
 
 .continue-shopping-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
 }
 
 @keyframes fadeInUp {

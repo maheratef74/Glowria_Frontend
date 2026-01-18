@@ -11,7 +11,7 @@ import './Header.css';
 const Header = () => {
   const { language } = useContext(LanguageContext);
   const { getCartItemsCount } = useCart();
-  const { isAuthenticated, user, logout } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

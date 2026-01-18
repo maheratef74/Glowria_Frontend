@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #ec4899, #f472b6);
+  background: linear-gradient(90deg, #f4a5b0, #e8a5a5);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -29,7 +29,7 @@
 
 .product-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 16px 32px rgba(244, 165, 176, 0.2);
 }
 
 .product-image {
@@ -46,7 +46,7 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -54,14 +54,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 12px rgba(244, 165, 176, 0.4);
   z-index: 2;
   transition: all 0.3s ease;
 }
 
 .product-card:hover .product-category-badge {
   transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.5);
+  box-shadow: 0 6px 16px rgba(244, 165, 176, 0.5);
 }
 
 .image-placeholder {
@@ -111,7 +111,7 @@
 .product-price {
   font-size: 1.75rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,7 +128,7 @@
 .add-to-cart-btn {
   width: 100%;
   padding: 0.875rem;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -159,7 +159,7 @@
 
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 8px 16px rgba(244, 165, 176, 0.4);
 }
 
 .add-to-cart-btn:active {

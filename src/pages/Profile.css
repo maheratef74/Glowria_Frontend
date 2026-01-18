@@ -12,7 +12,7 @@
 .profile-title {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -48,12 +48,12 @@
   width: 100px;
   height: 100px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  box-shadow: 0 4px 12px rgba(244, 165, 176, 0.3);
 }
 
 .avatar-icon {
@@ -130,8 +130,8 @@
 }
 
 .order-card:hover {
-  border-color: #ec4899;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
+  border-color: #f4a5b0;
+  box-shadow: 0 4px 12px rgba(244, 165, 176, 0.1);
   transform: translateY(-2px);
 }
 
@@ -199,7 +199,7 @@
 .order-total {
   font-size: 1.25rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  background: linear-gradient(135deg, #f4a5b0 0%, #e8a5a5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -249,7 +249,7 @@
 }
 
 .item-price {
-  color: #ec4899;
+  color: #f4a5b0;
   font-weight: 600;
 }
 

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
 import { translations as enTranslations } from '../translations/en';
 import { translations as arTranslations } from '../translations/ar';
